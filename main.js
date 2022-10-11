@@ -34,8 +34,8 @@ function setup()
 function draw()
 {
     image(video,0,0,600,500);
- song1_status= song_1.isPlaying();
- song2_status=song_2.isPlaying();
+ song1_status= song1.isPlaying();
+ song2_status=song2.isPlaying();
 
     fill("#8442a1");
     stroke("#561e6e");
@@ -45,12 +45,12 @@ function draw()
 
 circle(leftWristX, leftWristY,20);
 
-song_2.stop();
+song2.stop();
 
 if(song1_status=="false")
 {
- song_1.play();
- document.getElementById("song").innerHTML=song_1;
+ song1.play();
+ document.getElementById("song").innerHTML=song1;
 }
 }
 
@@ -59,12 +59,12 @@ if(score_right_wrist>0.2)
 
 circle(rightWristX, rightWristY,20);
 
-song_1.stop();
+song1.stop();
 
 if(song2_status=="false")
 {
- song_2.play();
- document.getElementById("song").innerHTML=song_2;
+ song2.play();
+ document.getElementById("song").innerHTML=song2;
 }
 }
    
