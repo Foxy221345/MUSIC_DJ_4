@@ -49,7 +49,9 @@ song2.stop();
 
 if(song1_status=="false")
 {
+    console.log("song1 is playing");
  song1.play();
+ console.log("**song1 is playing**");
  document.getElementById("song").innerHTML=song1;
 }
 }
@@ -63,6 +65,7 @@ song1.stop();
 
 if(song2_status=="false")
 {
+    console.log("song2 is playing");
  song2.play();
  document.getElementById("song").innerHTML=song2;
 }
@@ -92,4 +95,10 @@ function gotPoses(results)
         score_left_wrist=results[0].pose.keypoints[9].score;
         score_right_wrist=results[0].pose.keypoints[10].score;
     }
+}
+
+function play()
+{ song.play();
+  song.setVolume(1);
+  song.rate(1); 
 }
