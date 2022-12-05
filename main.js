@@ -48,12 +48,10 @@ function draw()
 circle(leftWristX, leftWristY,20);
 
 song2.stop();
-console.log("song2 stopped");
-if(song1_status=="false")
+if(song1_status==false)
 {
  song1.play();
- console.log("**song1 is playing**");
- document.getElementById("song").innerHTML="playing Peter pan Theme";
+ document.getElementById("song").innerHTML="playing Harry Potter Theme";
 }
 }
 
@@ -64,11 +62,11 @@ circle(rightWristX, rightWristY,20);
 
 song1.stop();
 
-if(song2_status=="false")
+if(song2_status==false)
 {
-    console.log("song2 is playing");
+
  song2.play();
- document.getElementById("song").innerHTML="playing Harry Potter Theme";
+ document.getElementById("song").innerHTML="playing Peter Pan Theme";
 }
 }
    
